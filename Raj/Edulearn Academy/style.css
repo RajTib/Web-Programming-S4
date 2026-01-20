@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* HEADER */
+.site-header {
+    background-color: #1e293b;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.tagline {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* NAV */
+.main-nav {
+    background-color: #334155;
+    padding: 10px;
+    text-align: center;
+}
+
+.main-nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN LAYOUT */
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* COURSE SECTION */
+.course-overview {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #e2e8f0;
+}
+
+/* FACULTY */
+.faculty-details {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.faculty-details img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+/* ASIDE */
+.student-reviews {
+    flex: 1;
+    background: #eef2ff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+blockquote {
+    margin: 15px 0;
+    padding-left: 10px;
+    border-left: 4px solid #6366f1;
+}
+
+cite {
+    display: block;
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* ENROLL */
+.enroll-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.enroll-section a {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.enroll-section a:hover {
+    background-color: #1d4ed8;
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.site-footer a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+.page-content {
+    padding: 30px;
+    background: white;
+    margin: 20px;
+    border-radius: 6px;
+}
