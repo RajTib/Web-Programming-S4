@@ -4,7 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Uranus | CosmoPedia</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .tilt-note {
+            background-color: lightgreen;
+            color: black;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,9 +38,14 @@
     </nav>
 
     <main class="page-content planet-info">
-        <h2>Uranus</h2>
-        <img src="images/uranus.png" alt="Uranus">
-        <p>Uranus rotates on its side, making it unique.</p>
+        <h2><b><u>Uranus</u></b></h2>
+
+        <img src="images/uranus.png" alt="Uranus"
+             style="width:300px; border:2px solid white;">
+
+        <p>
+            <b>Uranus</b> rotates on its <u>side</u>, making it <i>unique</i>.
+        </p>
 
         <table>
             <tr>
@@ -49,6 +65,10 @@
                 <td>Hydrogen, Methane</td>
             </tr>
         </table>
+
+        <p class="tilt-note">
+            Uranus has an axial tilt of about 98°.
+        </p>
     </main>
 
     <footer class="site-footer">
@@ -56,5 +76,4 @@
     </footer>
 
 </body>
-
 </html>

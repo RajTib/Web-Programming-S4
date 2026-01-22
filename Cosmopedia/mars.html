@@ -4,7 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Mars | CosmoPedia</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .red-note {
+            background-color: lightpink;
+            color: black;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,28 +36,25 @@
     </nav>
 
     <main class="page-content planet-info">
-        <h2>Mars</h2>
-        <img src="images/mars.png" alt="Mars">
-        <p>Mars is known as the Red Planet due to iron oxide on its surface.</p>
+        <h2><b><u>Mars</u></b></h2>
+
+        <img src="images/mars.png" alt="Mars"
+             style="width:300px; border:2px solid white;">
+
+        <p>
+            <b>Mars</b> is known as the <u>Red Planet</u> due to <i>iron oxide</i>.
+        </p>
 
         <table>
-            <tr>
-                <th>Distance from Sun</th>
-                <td>227.9 million km</td>
-            </tr>
-            <tr>
-                <th>Orbital Period</th>
-                <td>687 days</td>
-            </tr>
-            <tr>
-                <th>Moons</th>
-                <td>2</td>
-            </tr>
-            <tr>
-                <th>Atmosphere</th>
-                <td>Carbon Dioxide</td>
-            </tr>
+            <tr><th>Distance from Sun</th><td>227.9 million km</td></tr>
+            <tr><th>Orbital Period</th><td>687 days</td></tr>
+            <tr><th>Moons</th><td>2</td></tr>
+            <tr><th>Atmosphere</th><td>Carbon Dioxide</td></tr>
         </table>
+
+        <p class="red-note">
+            Mars is a prime candidate for future exploration.
+        </p>
     </main>
 
     <footer class="site-footer">
@@ -56,5 +62,4 @@
     </footer>
 
 </body>
-
 </html>

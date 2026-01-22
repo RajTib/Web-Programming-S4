@@ -4,7 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Neptune | CosmoPedia</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .wind-note {
+            background-color: lightcoral;
+            color: black;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,9 +38,14 @@
     </nav>
 
     <main class="page-content planet-info">
-        <h2>Neptune</h2>
-        <img src="images/neptune.png" alt="Neptune">
-        <p>Neptune is the farthest planet and known for strong winds.</p>
+        <h2><b><u>Neptune</u></b></h2>
+
+        <img src="images/neptune.png" alt="Neptune"
+             style="width:300px; border:2px solid white;">
+
+        <p>
+            <b>Neptune</b> is the <u>farthest</u> planet and known for <i>strong winds</i>.
+        </p>
 
         <table>
             <tr>
@@ -49,6 +65,10 @@
                 <td>Hydrogen, Methane</td>
             </tr>
         </table>
+
+        <p class="wind-note">
+            Neptune has the fastest winds in the solar system.
+        </p>
     </main>
 
     <footer class="site-footer">
@@ -56,5 +76,4 @@
     </footer>
 
 </body>
-
 </html>

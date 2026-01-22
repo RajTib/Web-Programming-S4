@@ -4,7 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Saturn | CosmoPedia</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .ring-note {
+            background-color: lightblue;
+            color: black;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,9 +38,14 @@
     </nav>
 
     <main class="page-content planet-info">
-        <h2>Saturn</h2>
-        <img src="images/saturn.png" alt="Saturn">
-        <p>Saturn is famous for its extensive ring system.</p>
+        <h2><b><u>Saturn</u></b></h2>
+
+        <img src="images/saturn.png" alt="Saturn"
+             style="width:300px; border:2px solid white;">
+
+        <p>
+            <b>Saturn</b> is famous for its <u>ring system</u> and is a <i>gas giant</i>.
+        </p>
 
         <table>
             <tr>
@@ -49,6 +65,10 @@
                 <td>Hydrogen, Helium</td>
             </tr>
         </table>
+
+        <p class="ring-note">
+            Saturn’s rings are made of ice and rock.
+        </p>
     </main>
 
     <footer class="site-footer">
@@ -56,5 +76,4 @@
     </footer>
 
 </body>
-
 </html>

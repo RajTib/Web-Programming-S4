@@ -4,7 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Jupiter | CosmoPedia</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* internal page-specific styles */
+        .highlight {
+            background-color: yellow;
+            color: black;
+        }
+
+        .moon-list li {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,10 +42,15 @@
     </nav>
 
     <main class="page-content planet-info">
-        <h2>Jupiter</h2>
-        <img src="images/jupiter.png" alt="Jupiter">
-        <p>Jupiter is the largest planet in the solar system.</p>
 
+        <h2><b><u>Jupiter</u></b></h2>
+
+        <img src="images/jupiter.png" alt="Jupiter"
+             style="width: 300px; border: 2px solid white;">
+
+        <p><b>Jupiter</b> is the <u>largest</u> planet in the <i>solar system</i>.</p>
+
+        <!-- Table of facts -->
         <table>
             <tr>
                 <th>Distance from Sun</th>
@@ -49,6 +69,18 @@
                 <td>Hydrogen, Helium</td>
             </tr>
         </table>
+
+        <!-- List of major moons -->
+        <h3>Major Moons</h3>
+        <ul class="moon-list">
+            <li><b>Io</b></li>
+            <li><b>Europa</b></li>
+            <li><b>Ganymede</b></li>
+            <li><b>Callisto</b></li>
+        </ul>
+
+        <p class="highlight">Jupiter is known for the Great Red Spot, a huge storm system.</p>
+
     </main>
 
     <footer class="site-footer">

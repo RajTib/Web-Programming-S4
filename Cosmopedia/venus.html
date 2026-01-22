@@ -4,7 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Venus | CosmoPedia</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hot-note {
+            background-color: lightcoral;
+            color: black;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,28 +36,25 @@
     </nav>
 
     <main class="page-content planet-info">
-        <h2>Venus</h2>
-        <img src="images/venus.png" alt="Venus">
-        <p>Venus is the hottest planet due to its thick carbon dioxide atmosphere.</p>
+        <h2><b><u>Venus</u></b></h2>
+
+        <img src="images/venus.png" alt="Venus"
+             style="width:300px; border:2px solid white;">
+
+        <p>
+            <b>Venus</b> is the <u>hottest</u> planet due to its <i>dense atmosphere</i>.
+        </p>
 
         <table>
-            <tr>
-                <th>Distance from Sun</th>
-                <td>108.2 million km</td>
-            </tr>
-            <tr>
-                <th>Orbital Period</th>
-                <td>225 days</td>
-            </tr>
-            <tr>
-                <th>Moons</th>
-                <td>None</td>
-            </tr>
-            <tr>
-                <th>Atmosphere</th>
-                <td>Carbon Dioxide</td>
-            </tr>
+            <tr><th>Distance from Sun</th><td>108.2 million km</td></tr>
+            <tr><th>Orbital Period</th><td>225 days</td></tr>
+            <tr><th>Moons</th><td>None</td></tr>
+            <tr><th>Atmosphere</th><td>Carbon Dioxide</td></tr>
         </table>
+
+        <p class="hot-note">
+            Venus experiences a runaway greenhouse effect.
+        </p>
     </main>
 
     <footer class="site-footer">
@@ -56,5 +62,4 @@
     </footer>
 
 </body>
-
 </html>

@@ -4,7 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Mercury | CosmoPedia</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .heat-note {
+            background-color: lightgray;
+            color: black;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,28 +36,25 @@
     </nav>
 
     <main class="page-content planet-info">
-        <h2>Mercury</h2>
-        <img src="images/mercury.png" alt="Mercury">
-        <p>Mercury is the closest planet to the Sun and the smallest in the solar system.</p>
+        <h2><b><u>Mercury</u></b></h2>
+
+        <img src="images/mercury.png" alt="Mercury"
+             style="width:300px; border:2px solid white;">
+
+        <p>
+            <b>Mercury</b> is the <u>closest</u> planet to the Sun and the <i>smallest</i> in the solar system.
+        </p>
 
         <table>
-            <tr>
-                <th>Distance from Sun</th>
-                <td>57.9 million km</td>
-            </tr>
-            <tr>
-                <th>Orbital Period</th>
-                <td>88 days</td>
-            </tr>
-            <tr>
-                <th>Moons</th>
-                <td>None</td>
-            </tr>
-            <tr>
-                <th>Atmosphere</th>
-                <td>Oxygen, Sodium</td>
-            </tr>
+            <tr><th>Distance from Sun</th><td>57.9 million km</td></tr>
+            <tr><th>Orbital Period</th><td>88 days</td></tr>
+            <tr><th>Moons</th><td>None</td></tr>
+            <tr><th>Atmosphere</th><td>Oxygen, Sodium</td></tr>
         </table>
+
+        <p class="heat-note">
+            Mercury has extreme temperature variations.
+        </p>
     </main>
 
     <footer class="site-footer">
@@ -56,5 +62,4 @@
     </footer>
 
 </body>
-
 </html>

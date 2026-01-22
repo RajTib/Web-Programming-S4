@@ -4,7 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Earth | CosmoPedia</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .life-note {
+            background-color: lightgreen;
+            color: black;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,28 +36,25 @@
     </nav>
 
     <main class="page-content planet-info">
-        <h2>Earth</h2>
-        <img src="images/earth.png" alt="Earth">
-        <p>Earth is the only known planet that supports life.</p>
+        <h2><b><u>Earth</u></b></h2>
+
+        <img src="images/earth.png" alt="Earth"
+             style="width:300px; border:2px solid white;">
+
+        <p>
+            <b>Earth</b> is the only known planet that <u>supports life</u>.
+        </p>
 
         <table>
-            <tr>
-                <th>Distance from Sun</th>
-                <td>149.6 million km</td>
-            </tr>
-            <tr>
-                <th>Orbital Period</th>
-                <td>365 days</td>
-            </tr>
-            <tr>
-                <th>Moons</th>
-                <td>1</td>
-            </tr>
-            <tr>
-                <th>Atmosphere</th>
-                <td>Nitrogen, Oxygen</td>
-            </tr>
+            <tr><th>Distance from Sun</th><td>149.6 million km</td></tr>
+            <tr><th>Orbital Period</th><td>365 days</td></tr>
+            <tr><th>Moons</th><td>1</td></tr>
+            <tr><th>Atmosphere</th><td>Nitrogen, Oxygen</td></tr>
         </table>
+
+        <p class="life-note">
+            Earth has liquid water and a stable climate.
+        </p>
     </main>
 
     <footer class="site-footer">
@@ -56,5 +62,4 @@
     </footer>
 
 </body>
-
 </html>
