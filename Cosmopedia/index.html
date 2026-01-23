@@ -7,24 +7,17 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Internal CSS -->
-    <style>
-        .intro-note {
-            background-color: lightyellow;
-            color: black;
-            padding: 8px;
-        }
-    </style>
 </head>
 
 <body>
 
+    <!-- ===== HEADER ===== -->
     <header class="site-header">
         <h1>CosmoPedia</h1>
         <p class="tagline">A Digital Encyclopedia of Our Solar System</p>
     </header>
 
+    <!-- ===== NAVIGATION ===== -->
     <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="mercury.html">Mercury</a>
@@ -37,23 +30,50 @@
         <a href="neptune.html">Neptune</a>
     </nav>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="page-content">
-        <h2><b><u>The Solar System</u></b></h2>
 
-        <p style="font-size: 1.05rem;">
-            Our <b>solar system</b> consists of the <u>Sun</u> and eight planets that
-            orbit it. Each planet is <i>unique</i> in composition, atmosphere, and behavior.
-            Click on any planet above to explore detailed information.
-        </p>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h2>The Solar System</h2>
+            <p>
+                Explore the Sun, planets, and the fascinating dynamics of our cosmic neighborhood.
+            </p>
+        </section>
 
-        <p class="intro-note">
-            This project demonstrates basic <b><i>HTML</i></b> and <u>CSS</u> concepts.
-        </p>
+        <!-- OVERVIEW ARTICLE -->
+        <article class="overview">
+            <p style="font-size: 1.05rem;">
+                Our <b>solar system</b> consists of the <u>Sun</u> and eight planets that orbit it.
+                Each planet is <i>unique</i> in composition, atmosphere, and behavior.
+                Click on any planet above to explore detailed information.
+            </p>
+        </article>
+
+        <!-- PLANET QUICK LINKS -->
+        <section class="planet-grid">
+            <a href="mercury.html" class="planet-card">Mercury</a>
+            <a href="venus.html" class="planet-card">Venus</a>
+            <a href="earth.html" class="planet-card">Earth</a>
+            <a href="mars.html" class="planet-card">Mars</a>
+            <a href="jupiter.html" class="planet-card">Jupiter</a>
+            <a href="saturn.html" class="planet-card">Saturn</a>
+            <a href="uranus.html" class="planet-card">Uranus</a>
+            <a href="neptune.html" class="planet-card">Neptune</a>
+        </section>
+
+        <!-- ASIDE -->
+        <aside class="home-highlight">
+            🌌 Select a planet to begin your journey through space.
+        </aside>
+
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
         <p>© 2026 CosmoPedia Project</p>
     </footer>
 
 </body>
+
 </html>
