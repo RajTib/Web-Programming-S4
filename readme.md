@@ -37,7 +37,7 @@ If it helps us understand better, it belongs here.
 
 This repository is maintained by:
 - **Raj**
-- a friend who’s on the same learning grind 💪
+- **Kriday**
 
 We use it to:
 - share code
