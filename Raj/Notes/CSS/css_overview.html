@@ -1,0 +1,222 @@
+# CSS Overview
+
+CSS (Cascading Style Sheets) is used to style and layout web pages. It describes how HTML elements should display on the screen.
+
+CSS include in the following ways:
+1. Inline CSS
+2. Internal CSS
+3. External CSS
+
+Inline CSS is used to style a single element.
+Internal CSS is used to style a single page.
+External CSS is used to style multiple pages.
+
+**Example for inline CSS**
+```html
+<p style="color: blue; font-size: 18px;">This is a paragraph</p>
+```
+**Example for internal CSS**
+```html
+<style>
+    p { color: blue; font-size: 18px; }
+</style>
+```
+**Example for external CSS**
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+---
+
+## 2. CSS Syntax and Style
+
+**Theory:**  
+Syntax follows:  
+```css
+selector {
+  property: value;
+  property2: value2;
+}
+```
+
+**Example:**
+```css
+h1 {
+  text-align: center;
+  color: green;
+}
+```
+**Explanation:**  
+Styles all `<h1>` headers to be centered and green.
+
+---
+
+## 3. Class Selectors
+
+**Theory:**  
+A class selector lets you style elements assigned with a class attribute.
+
+**Example:**
+```css
+.highlight {
+  background: yellow;
+}
+```
+```html
+<p class="highlight">This is highlighted text.</p>
+```
+**Explanation:**  
+All elements with `class="highlight"` get a yellow background.
+
+---
+
+## 4. ID Selectors
+
+**Theory:**  
+ID selectors target elements with a specific ID attribute.  
+Use `#` followed by the ID name.
+
+**Example:**
+```css
+#main-title {
+  font-size: 32px;
+}
+```
+```html
+<h1 id="main-title">Welcome</h1>
+```
+**Explanation:**  
+The element with `id="main-title"` is styled with a font size of 32px.
+
+---
+
+## 5. `span` and `div` Elements
+
+**Theory:**  
+- `<div>` is a block container, used for grouping sections.
+- `<span>` is an inline container, for styling part of a text.
+
+**Examples:**
+```html
+<div class="card">
+  <span class="highlight">Important</span> Notice!
+</div>
+```
+**Explanation:**  
+- The `.card` class could style a whole section.
+- The `.highlight` class styles just the word "Important".
+
+---
+
+## 6. Cascading, `style` Attribute, `style` Container, External CSS Files
+
+**Theory:**  
+- **Cascading:** Styles can override one another based on source (inline > internal > external).
+- **`style` Attribute:** Inline styling directly on elements.
+- **Internal CSS:** Using `<style>` in HTML `<head>`.
+- **External CSS:** Linked .css file.
+
+**Examples:**
+- **Inline:**
+  ```html
+  <p style="color: red;">Red Text</p>
+  ```
+- **Internal:**
+  ```html
+  <style>
+    p { color: green; }
+  </style>
+  ```
+- **External:**
+  ```html
+  <link rel="stylesheet" href="style.css">
+  ```
+**Explanation:**  
+Order of specificity matters; inline styles override others, internal can override external, etc.
+
+---
+
+## 7. CSS Properties
+
+### a. Color Properties
+
+**Example:**
+```css
+body { color: #222; background-color: #f7f7fb; }
+```
+**Explanation:**  
+Sets text and background colors.
+
+### b. Font Properties
+
+**Example:**
+```css
+p { font-family: Verdana, sans-serif; font-size: 16px; }
+```
+**Explanation:**  
+Controls font family and size.
+
+### c. Line-height Property
+
+**Example:**
+```css
+p { line-height: 1.5; }
+```
+**Explanation:**  
+Spacing between lines of text.
+
+### d. Text Properties
+
+**Example:**
+```css
+h2 { text-align: right; text-decoration: underline; }
+```
+**Explanation:**  
+Aligns and decorates text.
+
+### e. Border Properties
+
+**Example:**
+```css
+div { border: 1px solid #000; }
+```
+**Explanation:**  
+Applies a border to elements.
+
+### f. Element Box (Box Model), Padding, Margin
+
+**Theory:**  
+The CSS box model describes element layout:
+- **Content**: The text/image/element itself.
+- **Padding**: Space inside border, around content.
+- **Border**: Surrounds the padding (and content).
+- **Margin**: Space outside the border.
+
+**Example:**
+```css
+.card {
+  padding: 20px;
+  border: 2px solid #eee;
+  margin: 12px;
+}
+```
+**Explanation:**  
+- `padding`: Space inside the card.
+- `border`: Line around the card.
+- `margin`: Space outside the card.
+
+---
+
+## 8. Hosting a Website and GIT
+
+**Theory:**  
+- **Hosting:** Upload your site files (HTML, CSS, etc.) to a server so anyone can see it online.
+- **GIT:** A version control system to track code changes and collaborate.
+
+**Example Workflow:**
+1. Create a GitHub repository.
+2. Push your website files.
+3. Deploy using services like GitHub Pages or Netlify.
+
+**Explanation:**  
+GIT helps you manage code versions, and hosting makes your website live.

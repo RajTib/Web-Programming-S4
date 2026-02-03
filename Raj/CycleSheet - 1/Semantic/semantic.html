@@ -3,25 +3,72 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic Layout</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 2px solid #333;
+            margin-bottom: 15px;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            width: 70%;
+            float: left;
+        }
+
+        aside {
+            width: 25%;
+            float: right;
+            border-left: 2px solid #ccc;
+            padding-left: 15px;
+        }
+
+        footer {
+            clear: both;
+            margin-top: 30px;
+            border-top: 2px solid #333;
+            padding-top: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <h1>The First World War</h1>
         <p>A global conflict that reshaped modern history</p>
     </header>
 
+    <!-- NAVIGATION -->
     <nav>
-        <a href="semantic.html">Home</a> |
-        <a href="causes.html">Causes</a> |
-        <a href="battles.html">Battles</a> |
+        <a href="semantic.html">Home</a>
+        <a href="causes.html">Causes</a>
+        <a href="battles.html">Battles</a>
         <a href="aftermath.html">Aftermath</a>
     </nav>
 
+    <!-- MAIN CONTENT -->
     <section>
+
         <article>
             <h2>Overview</h2>
             <p>
@@ -42,8 +89,10 @@
                 across Europe, eventually drawing many nations into the conflict.
             </p>
         </article>
+
     </section>
 
+    <!-- ASIDE -->
     <aside>
         <h3>Related Topics</h3>
         <ul>
@@ -53,8 +102,9 @@
         </ul>
     </aside>
 
+    <!-- FOOTER -->
     <footer>
-        <p><b>Raj Tibarewala | 24BYB0038 | 2026</b></p>
+        <p><strong>Raj Tibarewala | 24BYB0038 | 2026</strong></p>
     </footer>
 
 </body>
