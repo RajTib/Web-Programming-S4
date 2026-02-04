@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #ffffff;
+            font-family: system-ui, sans-serif;
+        }
+
+        .card {
+            width: 320px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            /* important for image clipping */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image section */
+        .card__image {
+            width: 100%;
+            height: 200px;
+            /* controls aspect ratio */
+            overflow: hidden;
+        }
+
+        .card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* THIS is the magic */
+            display: block;
+        }
+
+        /* Content section */
+        .card__content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Tags (the blob) */
+        .card__tags {
+            display: flex;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #f0f0f0;
+            font-size: 12px;
+        }
+
+        /* Text */
+        .card__title {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .card__text {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Button */
+        .card__btn {
+            align-self: flex-start;
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: none;
+            background: #dbeafe;
+            color: #2563eb;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card__image">
+            <img src="https://m.media-amazon.com/images/I/51sG+agaZbS._AC_UF894,1000_QL80_.jpg" alt="Lake" />
+        </div>
+
+        <div class="card__content">
+            <div class="card__tags">
+                <span class="tag">Nature</span>
+                <span class="tag">Lake</span>
+            </div>
+
+            <h2 class="card__title">Lago di Braies</h2>
+
+            <p class="card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur
+                sodales morbi dignissim sed diam pharetra vitae ipsum odio.
+            </p>
+
+            <button class="card__btn">Read More</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

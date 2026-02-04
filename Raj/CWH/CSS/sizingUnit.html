@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+
+            width: 100vw;
+            /* This means take 100% of the user display width. This comes in work because different users have different display so the scaling should be according to that*/
+
+            height: 80vh;
+            /* This means take 100% of the user display height. This comes in work because different users have different display so the scaling should be according to that*/
+
+            background-color: aquamarine;
+            box-sizing: border-box;
+            font-size:  16px;           /* This will be inherited by the paragraph child */
+        }
+
+        .box p{
+            font-size: 1.5em;
+            /* em will make the font size times what it was going to be. Like the font-size is 16px but here inside paragraph its 1.5em so the final computed font-size would become 16 x 1.5 = 24px */
+        }
+
+        .mycont{
+            background-color: red;
+            color: yellow;
+            width: 100vmin;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus iure facere libero ab hic eligendi. Atque labore numquam eum in, aliquam quas est tempore, animi placeat eos cupiditate. Corporis aliquam sunt, dolorum praesentium soluta nesciunt deleniti unde tenetur nulla quasi odit molestiae recusandae a, necessitatibus ullam velit! Dignissimos fugit repellat tempore incidunt omnis nobis architecto asperiores voluptatum quisquam adipisci, dolores debitis soluta iste culpa fugiat sit iusto aperiam libero molestiae. Voluptates cum quos, quam, a harum maxime totam, neque consectetur perferendis veritatis quibusdam nostrum aliquam! Soluta, mollitia officiis deserunt, veritatis quasi aspernatur, sequi omnis nihil magni deleniti voluptates repellendus harum.</p>
+    </div>
+
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+
+</html>
