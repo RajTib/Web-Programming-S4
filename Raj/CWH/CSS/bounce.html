@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: blue;
+            width: 50%;
+            height: 75vh;
+        }
+
+        .circle {
+            background-color: red;
+            width: 121px;
+            height: 121px;
+            position: absolute;
+            bottom: 234px;
+            border-radius: 70px;
+            left: 16px;
+
+            animation: animateX 3s linear infinite, animateY 1s ease-in-out infinte alternate
+        }
+
+        @keyframes animateX {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes animateY {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>
