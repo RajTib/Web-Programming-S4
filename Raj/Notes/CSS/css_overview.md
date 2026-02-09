@@ -124,7 +124,7 @@ The element with `id="main-title"` is styled with a font size of 32px.
 - **Internal:**
   ```html
   <style>
-    p { color: green; }
+    p { color: green }
   </style>
   ```
 - **External:**

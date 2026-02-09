@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 900px;
+  margin: auto;
+  height: 100px;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 32px;
+}
+
+.subheading {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+}
+
+.shuttle {
+  width: 100%;
+  height: auto;
+}
+
+.hitler {
+  width: 100%;
+  height: auto;
+}
+
+.paraheading {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.article {
+  column-count: 2;
+  column-gap: 24px;
+  text-align: justify;
+  font-size: 14px;
+}
+
+.left,
+.right {
+  min-height: 1200px; /* adjust this number */
+}
+
+.ad {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #999;
+  padding: 12px;
+  margin-top: 20px;
+}
+
+.ad-image img {
+  width: 120px; /* tweak to match reference */
+  height: auto;
+  display: block;
+}
+
+.ad-main {
+  flex: 1; /* take most of the space */
+  text-align: center;
+}
+
+.ad-side {
+  width: 150px; /* small right column */
+  text-align: center;
+  font-size: 12px;
+}
