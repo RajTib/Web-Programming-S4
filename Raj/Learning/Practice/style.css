@@ -1,25 +1,58 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    display: flex;
-    gap: 20px;
+body {
+  width: 900px;
+  margin: auto;
+  height: 100px;
 }
 
-.box{
-    padding: 20px;
-    color: white;
-    font-size: 24px;
+.border {
+  height: 5px;
+  background-color: black;
+  border: none;
 }
 
-.red{
-    background-color: crimson;
-    flex: 1;
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 75px;
 }
 
-.green{
-    background-color: green;
-    flex: 2;
+.subheading {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 27px;
+}
+
+.box {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  width: 100%;
+  flex: 1;
+}
+
+.right {
+  width: 100%;
+  flex: 1;
+}
+
+.shuttle {
+  width: 100%;
+  height: auto;
+}
+
+.hitler {
+  width: 100%;
+  height: auto;
+}
+
+.space-walk {
+  width: 100%;
+  height: auto;
 }
