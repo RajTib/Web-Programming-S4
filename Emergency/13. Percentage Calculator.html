@@ -1,0 +1,18 @@
+<input id="percent">
+% of
+<input id="number">
+
+<button onclick="calc()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+    function calc() {
+        let p = document.getElementById("percent").value;
+        let n = document.getElementById("number").value;
+
+        let ans = (p / 100) * n;
+
+        document.getElementById("result").innerHTML = ans;
+    }
+</script>

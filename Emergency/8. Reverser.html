@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Sentence Reverser</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .word {
+            border: 1px solid red;
+            padding: 5px;
+            margin: 4px;
+            display: inline-block;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Sentence Reverser!</h2>
+
+    Phrase:
+    <input type="text" id="phrase">
+
+    <br><br>
+
+    Filter:
+    <input type="text" id="filter">
+
+    <br><br>
+
+    <button onclick="reverseSentence()">Go!</button>
+
+    <br><br>
+
+    <div id="words"></div>
+
+    <p id="count"></p>
+
+
+    <script>
+
+        function reverseSentence() {
+
+            let phrase = document.getElementById("phrase").value;
+            let filter = document.getElementById("filter").value.toLowerCase();
+
+            let wordsDiv = document.getElementById("words");
+            let countDiv = document.getElementById("count");
+
+            wordsDiv.innerHTML = "";
+            countDiv.innerHTML = "";
+
+            let words = phrase.split(" ").reverse();
+
+            let filtered = 0;
+            let index = 0;
+
+            for (let i = 0; i < words.length; i++) {
+
+                let word = words[i];
+
+                if (filter !== "" && word.toLowerCase().includes(filter)) {
+                    filtered++;
+                    continue;
+                }
+
+                let span = document.createElement("span");
+
+                span.className = "word";
+
+                if (index % 2 === 0) {
+                    span.classList.add("underline");
+                }
+
+                span.innerText = word;
+
+                wordsDiv.appendChild(span);
+
+                index++;
+
+            }
+
+            if (filtered > 0) {
+                countDiv.innerText = filtered + " word(s) filtered out";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

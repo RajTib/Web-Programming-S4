@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Box Click Event</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 50px;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+        }
+
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 120px;
+            cursor: pointer;
+        }
+
+        /* Green box */
+        #box1 {
+            background: green;
+            top: 80px;
+            left: 20px;
+            z-index: 1;
+        }
+
+        /* Blue box */
+        #box2 {
+            background: blue;
+            top: 30px;
+            left: 80px;
+            z-index: 2;
+        }
+
+        /* Red box */
+        #box3 {
+            background: red;
+            top: 90px;
+            left: 150px;
+            z-index: 3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3>Click a box to bring it to front</h3>
+
+    <div class="container">
+
+        <div id="box1" class="box" onclick="bringFront(this)"></div>
+
+        <div id="box2" class="box" onclick="bringFront(this)"></div>
+
+        <div id="box3" class="box" onclick="bringFront(this)"></div>
+
+    </div>
+
+    <script>
+
+        let highest = 3;
+
+        function bringFront(element) {
+
+            highest++;
+            element.style.zIndex = highest;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

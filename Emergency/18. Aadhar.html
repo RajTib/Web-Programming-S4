@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>User Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>User Registration</h2>
+
+        <form id="form">
+
+            Aadhaar Number
+            <input type="text" id="aadhaar">
+            <span class="error" id="aadhaarError"></span>
+
+            PAN Number
+            <input type="text" id="pan">
+            <span class="error" id="panError"></span>
+
+            Email
+            <input type="text" id="email">
+            <span class="error" id="emailError"></span>
+
+            Phone Number
+            <input type="text" id="phone">
+            <span class="error" id="phoneError"></span>
+
+            Password
+            <input type="password" id="password">
+            <span class="error" id="passwordError"></span>
+
+            <button type="submit">Register</button>
+
+            <p id="successMessage"></p>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        const form = document.getElementById("form");
+
+        const aadhaar = document.getElementById("aadhaar");
+        const pan = document.getElementById("pan");
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone");
+        const password = document.getElementById("password");
+
+        aadhaar.addEventListener("input", validateAadhaar);
+        pan.addEventListener("input", validatePAN);
+        email.addEventListener("input", validateEmail);
+        phone.addEventListener("input", validatePhone);
+        password.addEventListener("input", validatePassword);
+
+        function validateAadhaar() {
+
+            let regex = /^[0-9]{12}$/;
+
+            if (!regex.test(aadhaar.value)) {
+                document.getElementById("aadhaarError").innerText = "Aadhaar must be 12 digits";
+                return false;
+            }
+
+            document.getElementById("aadhaarError").innerText = "";
+            return true;
+
+        }
+
+        function validatePAN() {
+
+            let regex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+
+            if (!regex.test(pan.value)) {
+                document.getElementById("panError").innerText = "Invalid PAN format (AAAAA1111A)";
+                return false;
+            }
+
+            document.getElementById("panError").innerText = "";
+            return true;
+
+        }
+
+        function validateEmail() {
+
+            let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!regex.test(email.value)) {
+                document.getElementById("emailError").innerText = "Invalid Email";
+                return false;
+            }
+
+            document.getElementById("emailError").innerText = "";
+            return true;
+
+        }
+
+        function validatePhone() {
+
+            let regex = /^[6-9][0-9]{9}$/;
+
+            if (!regex.test(phone.value)) {
+                document.getElementById("phoneError").innerText = "Invalid Indian phone number";
+                return false;
+            }
+
+            document.getElementById("phoneError").innerText = "";
+            return true;
+
+        }
+
+        function validatePassword() {
+
+            let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/;
+
+            if (!regex.test(password.value)) {
+                document.getElementById("passwordError").innerText = "Password must contain uppercase, lowercase, number and special character";
+                return false;
+            }
+
+            document.getElementById("passwordError").innerText = "";
+            return true;
+
+        }
+
+        form.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            if (
+                validateAadhaar() &&
+                validatePAN() &&
+                validateEmail() &&
+                validatePhone() &&
+                validatePassword()
+            ) {
+                document.getElementById("successMessage").innerText = "Registration Successful!";
+                document.getElementById("successMessage").className = "success";
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

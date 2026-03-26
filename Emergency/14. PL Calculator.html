@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Profit and Loss Calculator</title>
+
+    <style>
+        body {
+            background: #66d266;
+            font-family: Arial;
+        }
+
+        .container {
+
+            width: 500px;
+            margin: 80px auto;
+            background: #4f8f1c;
+            padding: 40px;
+            text-align: center;
+            color: white;
+
+        }
+
+        h1 {
+            color: black;
+            margin-bottom: 30px;
+        }
+
+        input {
+
+            padding: 5px;
+            margin: 10px;
+
+        }
+
+        button {
+
+            padding: 5px 15px;
+            margin-top: 10px;
+
+        }
+
+        .result {
+
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Profit and Loss Calculator</h1>
+
+        Cost Price (CP) :
+        <input type="number" id="cp"><br>
+
+        Selling Price (SP) :
+        <input type="number" id="sp"><br>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div class="result" id="result"></div>
+
+    </div>
+
+    <script>
+
+        function calculate() {
+
+            let cp = parseFloat(document.getElementById("cp").value);
+            let sp = parseFloat(document.getElementById("sp").value);
+
+            let profit = sp - cp;
+            let percent = (profit / cp) * 100;
+
+            document.getElementById("result").innerHTML =
+                "Profit : " + profit + "<br><br>" +
+                "Profit Percentage : " + percent.toFixed(2);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas Graphics</title>
+    <style>
+        canvas {
+            border: 3px solid black;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas1" width="300" height="350"></canvas>
+    <canvas id="canvas2" width="300" height="300"></canvas>
+
+    <script>
+
+        /* ---------- FIRST CANVAS (HELLO FACE) ---------- */
+
+        let c1 = document.getElementById("canvas1");
+        let ctx1 = c1.getContext("2d");
+
+        /* Hello text */
+
+        ctx1.font = "40px Arial";
+        ctx1.fillStyle = "blue";
+        ctx1.fillText("Hello", 90, 60);
+
+        /* Face circle */
+
+        ctx1.beginPath();
+        ctx1.arc(150, 200, 100, 0, 2 * Math.PI);
+        ctx1.fillStyle = "yellow";
+        ctx1.fill();
+        ctx1.strokeStyle = "orange";
+        ctx1.lineWidth = 3;
+        ctx1.stroke();
+
+        /* Eyes */
+
+        ctx1.fillStyle = "orange";
+
+        ctx1.fillRect(120, 170, 8, 8);
+        ctx1.fillRect(175, 170, 8, 8);
+
+        /* Mouth */
+
+        ctx1.beginPath();
+        ctx1.moveTo(130, 230);
+        ctx1.lineTo(180, 230);
+        ctx1.strokeStyle = "orange";
+        ctx1.lineWidth = 3;
+        ctx1.stroke();
+
+
+
+        /* ---------- SECOND CANVAS (SEMICIRCLE SHAPE) ---------- */
+
+        let c2 = document.getElementById("canvas2");
+        let ctx2 = c2.getContext("2d");
+
+        /* semicircle */
+
+        ctx2.beginPath();
+        ctx2.arc(150, 150, 100, Math.PI, 0);
+        ctx2.strokeStyle = "black";
+        ctx2.lineWidth = 5;
+        ctx2.stroke();
+
+        /* bottom line */
+
+        ctx2.beginPath();
+        ctx2.moveTo(50, 150);
+        ctx2.lineTo(250, 150);
+        ctx2.stroke();
+
+        /* vertical stand */
+
+        ctx2.beginPath();
+        ctx2.moveTo(150, 150);
+        ctx2.lineTo(150, 220);
+        ctx2.stroke();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parking Charges</title>
+</head>
+
+<body>
+
+    <script>
+        function calculateCharges(hours) {
+            let charge = 2.00;
+
+            if (hours > 3) {
+                charge += (Math.ceil(hours) - 3) * 0.5;
+            }
+
+            if (charge > 10) charge = 10;
+            return charge;
+        }
+
+        let total = 0;
+
+        for (let i = 1; i <= 3; i++) {
+            let hrs = parseFloat(prompt("Enter hours parked for customer " + i));
+            let charge = calculateCharges(hrs);
+            total += charge;
+
+            document.write("Customer " + i + " charge: $" + charge + "<br>");
+        }
+
+        document.write("Total receipts: $" + total);
+    </script>
+
+</body>
+
+</html>

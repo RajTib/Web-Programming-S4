@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <form onsubmit="return validate()">
+
+        Name:
+        <input type="text" id="name"><br>
+
+        Register Number:
+        <input type="text" id="reg"><br>
+
+        Mobile:
+        <input type="text" id="mobile"><br>
+
+        Email:
+        <input type="text" id="email"><br>
+
+        Temporary Address:
+        <input type="text" id="temp"><br>
+
+        Permanent Address:
+        <input type="text" id="perm"><br>
+
+        <input type="checkbox" onclick="copyAddress()"> Same as temporary<br>
+
+        <input type="submit">
+
+    </form>
+
+    <script>
+        function validate() {
+
+            let name = document.getElementById("name").value;
+            let reg = document.getElementById("reg").value;
+            let mobile = document.getElementById("mobile").value;
+            let email = document.getElementById("email").value;
+
+            let nameRegex = /^[A-Za-z]{1,30}$/;
+            let regRegex = /^[A-Za-z0-9]+$/;
+            let phoneRegex = /^\d{10}$/;
+            let emailRegex = /^\S+@\S+\.\S+$/;
+
+            if (!nameRegex.test(name)) {
+                alert("Invalid name");
+                return false;
+            }
+
+            if (!regRegex.test(reg)) {
+                alert("Invalid register number");
+                return false;
+            }
+
+            if (!phoneRegex.test(mobile)) {
+                alert("Invalid mobile");
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert("Invalid email");
+                return false;
+            }
+
+            return true;
+        }
+
+        function copyAddress() {
+            document.getElementById("perm").value = document.getElementById("temp").value;
+            document.getElementById("perm").disabled = true;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        let seatsAvailable = true;
+
+        function checkTicket() {
+
+            if (seatsAvailable) {
+
+                document.getElementById("result").innerHTML =
+                    "✅ Ticket Confirmed";
+
+            }
+            else {
+
+                document.getElementById("result").innerHTML =
+                    "❌ Tickets Not Available";
+
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>Ticket Booking</h2>
+
+    From:
+    <input type="text"><br><br>
+
+    To:
+    <input type="text"><br><br>
+
+    Train Name:
+
+    <select>
+        <option>Rajdhani Express</option>
+        <option>Shatabdi Express</option>
+        <option>Duronto Express</option>
+    </select>
+
+    <br><br>
+
+    Coach Number:
+
+    <select>
+        <option>S1</option>
+        <option>S2</option>
+        <option>S3</option>
+    </select>
+
+    <br><br>
+
+    Date:
+    <input type="date"><br><br>
+
+    Time:
+    <input type="time"><br><br>
+
+    Passengers Male:
+    <select>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+
+    <br><br>
+
+    Passengers Female:
+    <select>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="checkTicket()">Submit</button>
+
+    <button type="reset">Reset</button>
+
+    <p id="result"></p>
+
+</body>
+
+</html>
